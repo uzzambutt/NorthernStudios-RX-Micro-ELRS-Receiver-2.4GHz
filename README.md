@@ -10,7 +10,7 @@
 <h1 align="center">Nano 2.4 GHz ExpressLRS Diversity PA/LNA Receiver</h1>
 
 <p align="center">
-  <strong>An ultra-compact (16×22 mm), open-hardware 2.4 GHz ExpressLRS receiver featuring true antenna diversity, a high-power FEM (+20 dBm telemetry), integrated Wi-Fi ceramic antenna, and paneled breakaway rails for low-cost JLCPCB PCBA.</strong>
+  <strong>An ultra-compact (18×24 mm), open-hardware 2.4 GHz ExpressLRS receiver featuring true antenna diversity, a high-power FEM (+20 dBm telemetry), integrated Wi-Fi ceramic antenna, and paneled breakaway rails for low-cost JLCPCB PCBA.</strong>
 </p>
 
 <p align="center">
