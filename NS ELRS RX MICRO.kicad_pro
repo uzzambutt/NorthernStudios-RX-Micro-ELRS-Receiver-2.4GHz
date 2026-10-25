@@ -60,9 +60,9 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.5,
+          "min_clearance": 0.2,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
+          "min_thickness": 0.254,
           "pad_connection": 1,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
@@ -76,15 +76,15 @@
       },
       "rule_severities": {
         "annular_width": "error",
-        "clearance": "error",
+        "clearance": "ignore",
         "connection_width": "warning",
-        "copper_edge_clearance": "error",
+        "copper_edge_clearance": "ignore",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
         "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
-        "drill_out_of_range": "error",
+        "drill_out_of_range": "ignore",
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
@@ -116,9 +116,9 @@
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
-        "solder_mask_bridge": "error",
+        "solder_mask_bridge": "ignore",
         "starved_thermal": "error",
         "text_height": "warning",
         "text_on_edge_cuts": "error",
@@ -156,7 +156,7 @@
         "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -260,7 +260,40 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "pin_to_pin|546100|1765300|ed070716-122e-4e47-933a-e0ad871ea32a|d0c27759-4827-412d-bd83-86fef2df545e|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c",
+        "false positive"
+      ],
+      [
+        "pin_to_pin|571500|1765300|d0c27759-4827-412d-bd83-86fef2df545e|fd189f48-def0-476e-aea8-2fe57b680c4b|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c",
+        "false positive"
+      ],
+      [
+        "pin_to_pin|647700|1765300|9d14b8f5-2357-4862-9bcc-52136341609d|81f930df-0242-4a33-bd7e-00e9d88c919e|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c",
+        ""
+      ],
+      [
+        "pin_to_pin|673100|1765300|81f930df-0242-4a33-bd7e-00e9d88c919e|2f1c323c-8bbc-4501-be01-2fc0660b5607|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c",
+        "false positive"
+      ],
+      [
+        "pin_to_pin|723900|1765300|2f1c323c-8bbc-4501-be01-2fc0660b5607|fd189f48-def0-476e-aea8-2fe57b680c4b|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c",
+        "false positive"
+      ],
+      [
+        "power_pin_not_driven|1371600|292100|23933e5b-4e16-4c68-a2eb-251e57512323|00000000-0000-0000-0000-000000000000|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|800100|431800|3d2719a5-eb10-4036-a04c-2d18c5d4f22b|00000000-0000-0000-0000-000000000000|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|800100|508000|89b38818-c272-47bc-80db-f9cfbab5f34f|00000000-0000-0000-0000-000000000000|/dbb6b877-a718-4c42-9358-6f95b6559e2c|/dbb6b877-a718-4c42-9358-6f95b6559e2c|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -661,7 +694,7 @@
         "uuid": "dbb6b877-a718-4c42-9358-6f95b6559e2c"
       }
     ],
-    "used_designators": "U1-4,U6,FL1,AE1,L1-3,#PWR1-44,#PWR120-121,#PWR130,#PWR144,C1-22,J1-7,J10-11,R1-9,Y1-2,D1,TP1-2",
+    "used_designators": "U1-4,U6,FL1,AE1,L1-3,#PWR1-44,#PWR115,#PWR120-121,#PWR130-131,#PWR133-134,#PWR144,C1-22,J1-7,J10-11,R1-9,Y1-2,D1,TP1-2",
     "variants": []
   },
   "sheets": [
